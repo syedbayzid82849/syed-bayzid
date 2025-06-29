@@ -1,0 +1,12 @@
+import React from 'react';
+import { createBrowserRouter } from 'react-router';
+import HomeLayout from '../../Layouts/HomeLayout/HomeLayout';
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <HomeLayoutHomeLayout
+    },
+]);
+
+export default router;

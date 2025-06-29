@@ -1,0 +1,5 @@
+.sticky-element {
+  position: sticky;
+  top: 0; /* অথবা bottom, left, right */
+  z-index: 50; /* দরকার হলে সামনে আনার জন্য */
+}
