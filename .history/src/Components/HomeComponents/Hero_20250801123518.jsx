@@ -22,7 +22,7 @@ const Hero = () => {
                     </div>
                     <div className='flex gap-6 md:mx-auto lg:mx-0'>
                         <a
-                            href="/CV of Syed Bayzid.pdf"
+                            href="/"
                             download
                             target="_blank"
                             rel="noopener noreferrer"

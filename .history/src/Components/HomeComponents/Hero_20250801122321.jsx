@@ -1,9 +1,9 @@
 import { styles } from '../../../style';
 import mainProfile from '../../assets/SB.jpg'
 const Hero = () => {
-    const handleResumeDownload = () => {
-        toast.success('Downloading Resume...');
-    };
+    const handleGetResumeBtn = () => {
+        alert('CV Coming soon........')
+    }
     return (
         <section id='home' className=" text-gray-900 dark:text-white transition-colors duration-300">
 
@@ -21,16 +21,7 @@ const Hero = () => {
 
                     </div>
                     <div className='flex gap-6 md:mx-auto lg:mx-0'>
-                        <a
-                            href="/CV of Syed Bayzid.pdf"
-                            download
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={handleResumeDownload}
-                            className="px-8 py-3 font-semibold border rounded border-gray-400 text-gray-300"
-                        >
-                            Get Resume
-                        </a>
+                        <button  type="button" className="px-8 py-3 font-semibold border rounded border-gray-400 text-gray-300 cursor-pointer">Get Resume</button>
                         <button type="button" className="px-8 py-3 font-semibold border rounded border-gray-400 text-gray-300"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/syed-bayzid-b91343329/">Hire Me</a></button>
                     </div>
 

@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { styles } from '../../../style';
 import mainProfile from '../../assets/SB.jpg'
 const Hero = () => {

@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { styles } from '../../../style';
 import mainProfile from '../../assets/SB.jpg'
 const Hero = () => {
@@ -26,7 +27,6 @@ const Hero = () => {
                             download
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={handleResumeDownload}
                             className="px-8 py-3 font-semibold border rounded border-gray-400 text-gray-300"
                         >
                             Get Resume

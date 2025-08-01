@@ -3,7 +3,7 @@ import { MdEmail, MdPhone, MdWhatsapp } from 'react-icons/md';
 
 const ContactInfo = () => {
     return (
-        <section id='contact' className="py-6 text-slate-100 transition-colors duration-300">
+        <section id='contact' className="py-6 text-gray-800 transition-colors duration-300">
             <h1 className="text-4xl font-bold text-center mb-6 text">Contact</h1>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x divide-gray-300 dark:divide-gray-700">
                 <div className="py-6 md:py-0 md:px-6">

@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { styles } from '../../../style';
 import mainProfile from '../../assets/SB.jpg'
 const Hero = () => {
@@ -22,11 +23,11 @@ const Hero = () => {
                     </div>
                     <div className='flex gap-6 md:mx-auto lg:mx-0'>
                         <a
+                        
                             href="/CV of Syed Bayzid.pdf"
                             download
                             target="_blank"
                             rel="noopener noreferrer"
-                            onClick={handleResumeDownload}
                             className="px-8 py-3 font-semibold border rounded border-gray-400 text-gray-300"
                         >
                             Get Resume
