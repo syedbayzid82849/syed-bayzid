@@ -120,10 +120,10 @@ const MainProjectsSection = () => {
                                     </a>
                                 </p>
                                 <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
+                                    <strong>Challenges:</strong> {selectedProject.challenges}
                                 </p>
                                 <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
+                                    <strong>Future Plans:</strong> {selectedProject.futurePlans}
                                 </p>
                             </div>
                         </div>

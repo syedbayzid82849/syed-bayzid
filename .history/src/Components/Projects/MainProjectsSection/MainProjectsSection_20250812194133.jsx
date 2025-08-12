@@ -99,18 +99,15 @@ const MainProjectsSection = () => {
                                     ))}
                                 </Carousel>
                                 <p className="mt-4">
-                                    <strong>Tech Stack: </strong>
-                                    <span className="text-gray-600 dark:text-gray-400">
-                                        {selectedProject.techStack.join(", ")}
-                                    </span>
+                                    <strong>Tech Stack:</strong> {selectedProject.techStack.join(", ")}
                                 </p>
                                 <p>
-                                    <strong>Description:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.description}</span>
+                                    <strong>Description:</strong> {selectedProject.description}
                                 </p>
                                 <p>
                                     <strong>Live:</strong>{" "}
                                     <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
+                                        {selectedProject.liveLink}
                                     </a>
                                 </p>
                                 <p>
@@ -120,10 +117,10 @@ const MainProjectsSection = () => {
                                     </a>
                                 </p>
                                 <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
+                                    <strong>Challenges:</strong> {selectedProject.challenges}
                                 </p>
                                 <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
+                                    <strong>Future Plans:</strong> {selectedProject.futurePlans}
                                 </p>
                             </div>
                         </div>

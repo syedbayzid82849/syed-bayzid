@@ -69,67 +69,67 @@ const MainProjectsSection = () => {
 
                 {/* Modal */}
                 <div
-                    className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    {selectedProject && (
+  className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
+  onClick={(e) => e.stopPropagation()}
+>
+  {/* Modal content */}
+</div>
+
+                {selectedProject && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                        onClick={() => setSelectedProject(null)}  // বাইরের অংশে ক্লিক করলে modal বন্ধ হবে
+                    >
                         <div
-                            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                            onClick={() => setSelectedProject(null)}
+                            className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative"
+                            onClick={(e) => e.stopPropagation()}  // ভিতরে ক্লিক করলে বন্ধ হবে না
                         >
-                            <div
-                                className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                                onClick={(e) => e.stopPropagation()}
+                            <button
+                                className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
+                                onClick={() => setSelectedProject(null)}
                             >
-                                <button
-                                    className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
-                                    onClick={() => setSelectedProject(null)}
-                                >
-                                    ✕
-                                </button>
-                                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                                    {selectedProject.name}
-                                </h3>
-
-                                <Carousel autoPlay infiniteLoop showThumbs={false}>
-                                    {selectedProject.images.map((img, i) => (
-                                        <div key={i}>
-                                            <img src={img} alt={`${selectedProject.name} modal screenshot ${i + 1}`} />
-                                        </div>
-                                    ))}
-                                </Carousel>
-                                <p className="mt-4">
-                                    <strong>Tech Stack: </strong>
-                                    <span className="text-gray-600 dark:text-gray-400">
-                                        {selectedProject.techStack.join(", ")}
-                                    </span>
-                                </p>
-                                <p>
-                                    <strong>Description:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.description}</span>
-                                </p>
-                                <p>
-                                    <strong>Live:</strong>{" "}
-                                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
-                                    </a>
-                                </p>
-                                <p>
-                                    <strong>GitHub:</strong>{" "}
-                                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        {selectedProject.githubLink}
-                                    </a>
-                                </p>
-                                <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
-                                </p>
-                                <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
-                                </p>
-                            </div>
+                                ✕
+                            </button>
+                            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                                {selectedProject.name}
+                            </h3>
+                            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                                {selectedProject.name}
+                            </h3>
+                            <Carousel autoPlay infiniteLoop showThumbs={false}>
+                                {selectedProject.images.map((img, i) => (
+                                    <div key={i}>
+                                        <img src={img} alt={`${selectedProject.name} modal screenshot ${i + 1}`} />
+                                    </div>
+                                ))}
+                            </Carousel>
+                            <p className="mt-4">
+                                <strong>Tech Stack:</strong> {selectedProject.techStack.join(", ")}
+                            </p>
+                            <p>
+                                <strong>Description:</strong> {selectedProject.description}
+                            </p>
+                            <p>
+                                <strong>Live:</strong>{" "}
+                                <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                    {selectedProject.liveLink}
+                                </a>
+                            </p>
+                            <p>
+                                <strong>GitHub:</strong>{" "}
+                                <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                    {selectedProject.githubLink}
+                                </a>
+                            </p>
+                            <p>
+                                <strong>Challenges:</strong> {selectedProject.challenges}
+                            </p>
+                            <p>
+                                <strong>Future Plans:</strong> {selectedProject.futurePlans}
+                            </p>
                         </div>
-                    )}
-                </div>
-
+                    </div>
+                )}
             </div>
         </section>
     );

@@ -135,15 +135,6 @@ const MainProjectsSection = () => {
     );
 };
 
-const ProjectButton = ({ url, text }) => (
-    <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="h-10 px-2 py-2 font-semibold border rounded border-gray-800 text-gray-800 dark:border-gray-300 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition delay-100 duration-300 ease-in-out bg-indigo-500"
-    >
-        {text}
-    </a>
-);
+
 
 export default MainProjectsSection;

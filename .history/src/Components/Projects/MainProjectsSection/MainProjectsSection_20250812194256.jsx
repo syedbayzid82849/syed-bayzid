@@ -110,7 +110,7 @@ const MainProjectsSection = () => {
                                 <p>
                                     <strong>Live:</strong>{" "}
                                     <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
+                                        <span>{selectedProject.liveLink}</span>
                                     </a>
                                 </p>
                                 <p>
@@ -120,10 +120,10 @@ const MainProjectsSection = () => {
                                     </a>
                                 </p>
                                 <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
+                                    <strong>Challenges:</strong> {selectedProject.challenges}
                                 </p>
                                 <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
+                                    <strong>Future Plans:</strong> {selectedProject.futurePlans}
                                 </p>
                             </div>
                         </div>

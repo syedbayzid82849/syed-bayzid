@@ -105,12 +105,12 @@ const MainProjectsSection = () => {
                                     </span>
                                 </p>
                                 <p>
-                                    <strong>Description:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.description}</span>
+                                    <strong>Description:</strong> <span >{selectedProject.description}</span>
                                 </p>
                                 <p>
                                     <strong>Live:</strong>{" "}
                                     <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
+                                        {selectedProject.liveLink}
                                     </a>
                                 </p>
                                 <p>
@@ -120,10 +120,10 @@ const MainProjectsSection = () => {
                                     </a>
                                 </p>
                                 <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
+                                    <strong>Challenges:</strong> {selectedProject.challenges}
                                 </p>
                                 <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
+                                    <strong>Future Plans:</strong> {selectedProject.futurePlans}
                                 </p>
                             </div>
                         </div>

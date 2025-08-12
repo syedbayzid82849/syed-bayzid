@@ -68,10 +68,6 @@ const MainProjectsSection = () => {
                 </div>
 
                 {/* Modal */}
-                <div
-                    className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                    onClick={(e) => e.stopPropagation()}
-                >
                     {selectedProject && (
                         <div
                             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"

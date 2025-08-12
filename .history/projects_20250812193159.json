@@ -3,11 +3,11 @@
         "id": 1,
         "name": "Academix-Hub",
         "images": [
-            "/src/assets/academix1.png",
-            "/src/assets/academix2.png",
-            "/src/assets/academix3.png",
-            "/src/assets/academix4.png",
-            "/src/assets/academix5.png"
+            "/assets/academix1.png",
+            "/assets/academix2.png",
+            "/assets/academix3.png",
+            "/assets/academix4.png",
+            "/assets/academix5.png"
         ],
         "techStack": [
             "react",
@@ -26,31 +26,10 @@
         "id": 2,
         "name": "HobbyHub",
         "images": [
-            "/src/assets/hobbyhub1.png",
-            "/src/assets/hobbyhub2.png",
-            "/src/assets/hobbyhub3.png",
-            "/src/assets/hobbyhub4.png"
-        ],
-        "techStack": [
-            "react",
-            "vite",
-            "tailwind"
-        ],
-        "description": "HobbyHub connects users through local hobby groups—create, join, and explore communities.",
-        "liveLink": "https://hobby-hub-01.netlify.app/",
-        "githubLink": "https://github.com/syedbayzid82849/HobbyHub-project?tab=readme-ov-file",
-        "detailsLink": "https://github.com/syedbayzid82849/HobbyHub-project/blob/main/README.md",
-        "challenges": "Building an efficient group matching algorithm.",
-        "futurePlans": "Add in-app chat and event scheduling."
-    },
-    {
-        "id": 2,
-        "name": "HobbyHub",
-        "images": [
-            "/src/assets/hobbyhub1.png",
-            "/src/assets/hobbyhub2.png",
-            "/src/assets/hobbyhub3.png",
-            "/src/assets/hobbyhub4.png"
+            "/assets/hobbyhub1.png",
+            "/assets/hobbyhub2.png",
+            "/assets/hobbyhub3.png",
+            "/assets/hobbyhub4.png"
         ],
         "techStack": [
             "react",

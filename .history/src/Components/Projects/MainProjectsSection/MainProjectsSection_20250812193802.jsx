@@ -75,11 +75,11 @@ const MainProjectsSection = () => {
                     {selectedProject && (
                         <div
                             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                            onClick={() => setSelectedProject(null)}
+                            onClick={() => setSelectedProject(null)}  // বাইরের অংশে ক্লিক করলে modal বন্ধ হবে
                         >
                             <div
-                                className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                                onClick={(e) => e.stopPropagation()}
+                                className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative"
+                                onClick={(e) => e.stopPropagation()}  // ভিতরে ক্লিক করলে বন্ধ হবে না
                             >
                                 <button
                                     className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
@@ -90,7 +90,9 @@ const MainProjectsSection = () => {
                                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                                     {selectedProject.name}
                                 </h3>
-
+                                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                                    {selectedProject.name}
+                                </h3>
                                 <Carousel autoPlay infiniteLoop showThumbs={false}>
                                     {selectedProject.images.map((img, i) => (
                                         <div key={i}>
@@ -99,18 +101,15 @@ const MainProjectsSection = () => {
                                     ))}
                                 </Carousel>
                                 <p className="mt-4">
-                                    <strong>Tech Stack: </strong>
-                                    <span className="text-gray-600 dark:text-gray-400">
-                                        {selectedProject.techStack.join(", ")}
-                                    </span>
+                                    <strong>Tech Stack:</strong> {selectedProject.techStack.join(", ")}
                                 </p>
                                 <p>
-                                    <strong>Description:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.description}</span>
+                                    <strong>Description:</strong> {selectedProject.description}
                                 </p>
                                 <p>
                                     <strong>Live:</strong>{" "}
                                     <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
+                                        {selectedProject.liveLink}
                                     </a>
                                 </p>
                                 <p>
@@ -120,10 +119,10 @@ const MainProjectsSection = () => {
                                     </a>
                                 </p>
                                 <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
+                                    <strong>Challenges:</strong> {selectedProject.challenges}
                                 </p>
                                 <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
+                                    <strong>Future Plans:</strong> {selectedProject.futurePlans}
                                 </p>
                             </div>
                         </div>

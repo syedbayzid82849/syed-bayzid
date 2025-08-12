@@ -42,26 +42,5 @@
         "detailsLink": "https://github.com/syedbayzid82849/HobbyHub-project/blob/main/README.md",
         "challenges": "Building an efficient group matching algorithm.",
         "futurePlans": "Add in-app chat and event scheduling."
-    },
-    {
-        "id": 2,
-        "name": "HobbyHub",
-        "images": [
-            "/src/assets/hobbyhub1.png",
-            "/src/assets/hobbyhub2.png",
-            "/src/assets/hobbyhub3.png",
-            "/src/assets/hobbyhub4.png"
-        ],
-        "techStack": [
-            "react",
-            "vite",
-            "tailwind"
-        ],
-        "description": "HobbyHub connects users through local hobby groups—create, join, and explore communities.",
-        "liveLink": "https://hobby-hub-01.netlify.app/",
-        "githubLink": "https://github.com/syedbayzid82849/HobbyHub-project?tab=readme-ov-file",
-        "detailsLink": "https://github.com/syedbayzid82849/HobbyHub-project/blob/main/README.md",
-        "challenges": "Building an efficient group matching algorithm.",
-        "futurePlans": "Add in-app chat and event scheduling."
     }
 ]
