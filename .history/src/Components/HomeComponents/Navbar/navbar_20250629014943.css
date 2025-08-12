@@ -1,6 +1,0 @@
-#lgNav {
-    position: sticky;
-    top: 0;
-    /* অথবা bottom, left, right */
-    z-index: 50;
-}
