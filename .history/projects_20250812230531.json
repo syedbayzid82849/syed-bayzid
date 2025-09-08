@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Academix-Hub",
+        "images": [
+            "/src/assets/academix1.png",
+            "/src/assets/academix2.png",
+            "/src/assets/academix3.png",
+            "/src/assets/academix4.png",
+            "/src/assets/academix5.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind",
+            "react icon"
+        ],
+        "description": "Academix-Hub is a secure, interactive platform for course enrollment and content management with a clean UI and role-based access.",
+        "liveLink": "https://academix-hub.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/Academix-Hub-project?tab=readme-ov-file",
+        "detailsLink": "https://github.com/syedbayzid82849/Academix-Hub-project/blob/main/README.md",
+        "challenges": "Implementing role-based access control and secure authentication.",
+        "futurePlans": "Add video lessons and quiz features."
+    },
+    {
+        "id": 2,
+        "name": "HobbyHub",
+        "images": [
+            "/src/assets/hobbyhub1.png",
+            "/src/assets/hobbyhub2.png",
+            "/src/assets/hobbyhub3.png",
+            "/src/assets/hobbyhub4.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind"
+        ],
+        "description": "HobbyHub connects users through local hobby groups—create, join, and explore communities.",
+        "liveLink": "https://hobby-hub-01.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/HobbyHub-project?tab=readme-ov-file",
+        "detailsLink": "https://github.com/syedbayzid82849/HobbyHub-project/blob/main/README.md",
+        "challenges": "Building an efficient group matching algorithm.",
+        "futurePlans": "Add in-app chat and event scheduling."
+    },
+    {
+        "id": 3,
+        "name": "Syed Bayzid",
+        "images": [
+            "/src/assets/syedbayzid1.png",
+            "/src/assets/syedbayzid2.png",
+            "/src/assets/syedbayzid3.png",
+            "/src/assets/syedbayzid4.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind"
+        ],
+        "description": "Syed Bayzid's personal portfolio showcasing skills and projects.",
+        "liveLink": "https://syed-bayzid-portfolio.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/syed-bayzid-portfolio",
+        "detailsLink": "https://github.com/syedbayzid82849/HobbyHub-project/blob/main/README.md",
+        "challenges": "Building an efficient group matching algorithm.",
+        "futurePlans": "Add in-app chat and event scheduling."
+    }
+]

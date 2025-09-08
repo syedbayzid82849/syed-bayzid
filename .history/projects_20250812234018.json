@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name": "Academix-Hub",
+        "images": [
+            "/assets/academix2.png",
+            "/assets/academix1.png",
+            "/assets/academix3.png",
+            "/assets/academix4.png",
+            "/assets/academix5.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind",
+            "react icon"
+        ],
+        "description": "Academix-Hub is a secure, interactive platform for course enrollment and content management with a clean UI and role-based access.",
+        "liveLink": "https://academix-hub.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/Academix_Hub_Client_site.git",
+        "detailsLink": "https://github.com/syedbayzid82849/Academix_Hub_Client_site.git",
+        "challenges": "Implementing role-based access control and secure authentication.",
+        "futurePlans": "Add video lessons and quiz features."
+    },
+    {
+        "id": 2,
+        "name": "HobbyHub",
+        "images": [
+            "/public/assets/hobbyhub1.png",
+            "/public/assets/hobbyhub2.png",
+            "/public/assets/hobbyhub3.png",
+            "/public/assets/hobbyhub4.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind"
+        ],
+        "description": "HobbyHub connects users through local hobby groups—create, join, and explore communities.",
+        "liveLink": "https://hobby-hub-01.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/Hobby_Hub_Client_site.git",
+        "detailsLink": "https://github.com/syedbayzid82849/Hobby_Hub_Client_site.git",
+        "challenges": "Building an efficient group matching algorithm.",
+        "futurePlans": "Add in-app chat and event scheduling."
+    },
+    {
+        "id": 3,
+        "name": "Syed Bayzid",
+        "images": [
+            "/public/assets/syedbayzid1.png",
+            "/public/assets/syedbayzid2.png",
+            "/public/assets/syedbayzid3.png",
+            "/public/assets/syedbayzid4.png"
+        ],
+        "techStack": [
+            "react",
+            "vite",
+            "tailwind"
+        ],
+        "description": "Syed Bayzid's personal portfolio showcasing skills and projects.",
+        "liveLink": "https://syed-bayzid.netlify.app/",
+        "githubLink": "https://github.com/syedbayzid82849/syed-bayzid.git",
+        "detailsLink": "https://github.com/syedbayzid82849/syed-bayzid-portfolio/blob/main/README.md",
+        "challenges": "Challenges have been my best teachers in development. Whether it’s fixing tricky bugs, meeting tight deadlines, or ensuring responsive design across all devices, each obstacle has sharpened my problem-solving skills. Every hurdle has made me more adaptable and confident in delivering quality work.",
+        "futurePlans": "Thank you for visiting my portfolio. I’m Syed Bayzid, a passionate frontend developer dedicated to crafting clean, modern, and user-friendly web experiences. My work blends creativity with functionality, ensuring every project not only looks great but also performs seamlessly. I’m constantly learning and exploring new technologies to stay ahead in the ever-evolving web development landscape. Feel free to connect with me for collaborations, projects, or just to say hello. Let’s create something amazing together!"
+    }
+]

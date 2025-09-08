@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+}
+.container.box{
+    position: ba;
+}

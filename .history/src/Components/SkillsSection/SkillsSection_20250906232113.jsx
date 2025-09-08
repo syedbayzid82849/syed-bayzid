@@ -1,0 +1,36 @@
+import React from "react";
+import {skillsInfo} from "../../../constants";
+
+const SkillsStatic = () => {
+    return (
+        <section
+            id="skills"
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center"
+            }}
+            className="px-5 py-7 mx-auto mt-16"
+        >
+            <div>
+                <h2 className="text-4xl font-bold text-center mb-8 text-primary">Skills</h2>
+                <p className="text-lg text-center text-gray-600 dark:text-gray-400">An overview of my technical skills and knowledge gained through practical projects and continuous learning.</p>
+            </div>
+
+            {/* skills categories */}
+            <div>
+{
+                skillsInfo.map((category, index) => (
+                    <div key={index} className="mb-8">
+                        <h3 className="text-2xl font-semibold mb-4 text-secondary">{category.category}</h3>
+
+}
+            </div>
+        </section>
+    );
+};
+
+export default SkillsStatic;
+
+
+

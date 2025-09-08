@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-gradient-text {
+  background: linear-gradient(to right, #06b6d4, #9333ea);
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { border-color: transparent }
+  50% { border-color: currentColor }
+}
+
+.animate-typewriter {
+  overflow: hidden;            /* Hide overflowing text */
+  white-space: nowrap;         /* No line breaks */
+  border-right: 4px solid;     /* Cursor */
+  animation:
+    typewriter 3s steps(30) forwards,
+    blinkCursor 0.7s step-end infinite;
+  width: 0;                    /* Start from zero width */
+}
+
+
+/* @layer base {
+  :root { 
+    --background: 222 47% 3%;
+    --foreground: 210 40% 98%;
+  }
+
+  .dark {
+    --background: 222 47% 3%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .code-block {
+    background: var(--gradient-code);
+    @apply border border-muted rounded-lg p-3 font-code text-sm;
+  }
+} */
+@layer base {
+  :root {
+    --hero-primary: 271 81% 56%;
+    --hero-secondary: 193 76% 56%;
+    --hero-accent: 142 76% 36%;
+    --card: 222 47% 5%;
+    --card-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 193 76% 56%;
+    --accent-foreground: 222 47% 3%;
+  }
+}

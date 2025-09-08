@@ -1,0 +1,49 @@
+export const SkillsInfo = [
+    {
+        title: 'Frontend',
+        skills: [
+            { name: 'HTML', logo: htmlLogo },
+            { name: 'CSS', logo: cssLogo },
+            { name: 'SASS', logo: sassLogo },
+            { name: 'JavaScript', logo: javascriptLogo },
+            { name: 'React JS', logo: reactjsLogo },
+            { name: 'Next JS', logo: nextjsLogo },
+            { name: 'Tailwind CSS', logo: tailwindcssLogo },
+        ],
+    },
+    {
+        title: 'Backend',
+        skills: [
+            { name: 'Node JS', logo: nodejsLogo },
+            { name: 'Express JS', logo: expressjsLogo },
+            { name: 'MongoDB', logo: mongodbLogo },
+            { name: 'Firebase', logo: firebaseLogo },
+            { name: 'PostgreSQL', logo: postgreLogo },
+        ],
+    },
+    {
+        title: 'Languages',
+        skills: [
+            { name: 'C', logo: cLogo },
+            { name: 'C++', logo: cppLogo },
+            { name: 'Java', logo: javaLogo },
+            { name: 'Python', logo: pythonLogo },
+            { name: 'C-Sharp', logo: csharpLogo },
+            { name: 'JavaScript', logo: javascriptLogo },
+            { name: 'TypeScript', logo: typescriptLogo },
+        ],
+    },
+    {
+        title: 'Tools',
+        skills: [
+            { name: 'Git', logo: gitLogo },
+            { name: 'GitHub', logo: githubLogo },
+            { name: 'VS Code', logo: vscodeLogo },
+            { name: 'Postman', logo: postmanLogo },
+            { name: 'Compass', logo: mcLogo },
+            { name: 'Vercel', logo: vercelLogo },
+            { name: 'Netlify', logo: netlifyLogo },
+            { name: 'Figma', logo: figmaLogo },
+        ],
+    },
+];

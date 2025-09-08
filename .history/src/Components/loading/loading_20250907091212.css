@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+}
+.container .box{
+    position: absolute;
+width: 7rem;
+height: 7rem;
+top: 40%;
+left: 48%;
+margin: -3.1rem 0 0 -3.1rem;
+border-top: solid 3px #32afa9;
+border-radius: 50%;
+animation: rotate 2s infinite linear;
+
+}
+.container .box:before{
+content: "";
+position: a;
+}
