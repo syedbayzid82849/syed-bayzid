@@ -1,4 +1,11 @@
+# Dependency directories
+node_modules/
 
-node_modules
-dist
+# Build output
+dist/
+
+# Environment variables
 .env
+
+# VSCode Local History backups
+.history/
