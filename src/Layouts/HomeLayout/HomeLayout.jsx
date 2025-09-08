@@ -9,7 +9,7 @@ import Navbar from '../../Components/HomeComponents/Navbar/Navbar';
 
 const HomeLayout = () => {
     return (
-        <div className='max-w-7xl mx-auto border'>
+        <div className='max-w-7xl mx-auto'>
             <Navbar></Navbar>
             <Hero></Hero>
             <AboutMe></AboutMe>

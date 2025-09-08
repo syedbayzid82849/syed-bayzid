@@ -18,6 +18,13 @@ const ContactInfo = () => {
                         </div>
 
                         <div className="flex items-center gap-4">
+                            <MdEmail className="text-2xl text-blue-600" />
+                            <a href="mailto:husains82849@gmail.com" className="text-lg hover:underline">
+                                syedbayzid500@gmail.com
+                            </a>
+                        </div>
+
+                        <div className="flex items-center gap-4">
                             <MdPhone className="text-2xl text-green-600" />
                             <a href="tel:+8801703480840" className="text-lg hover:underline">
                                 +880 1703 380 840

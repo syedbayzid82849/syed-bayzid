@@ -1,149 +1,72 @@
-import React, { useEffect, useState } from "react";
-import projectsData from "../../../../projects.json";
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useQuery } from "@tanstack/react-query";
+import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import Loading from '../../loading/Loading';
+import ProjectModal from './ProjectModal';
 
-const MainProjectsSection = () => {
-    const [projects, setProjects] = useState([]);
+export default function MainProjectsSection() {
     const [selectedProject, setSelectedProject] = useState(null);
 
-    useEffect(() => {
-        setProjects(projectsData);
-    }, []);
+    const { data: projects, isLoading, error } = useQuery({
+        queryKey: ["projects"],
+        queryFn: async () => {
+            const res = await axios.get("https://portfolio-website-server-steel.vercel.app/projects");
+            return res.data;
+        },
+    });
+
+    if (isLoading) return <Loading />;
+    if (error) return <p className="flex justify-center items-center">Error loading projects</p>;
 
     return (
-        <section id="projects" className="py-10">
+        <section id="projects" className="px-5 py-7 mx-auto mt-16">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-8 text-primary">
-                    Projects
-                </h2>
-
-                <div className="flex flex-col gap-2">
-                    {projects.map((project) => (
-                        <div key={project.id} className="py-3 md:px-5">
-                            <div className="max-w-full p-3 rounded-md shadow-md bg-[#353535] dark:bg-gray-900 grid md:grid-cols-3 gap-3">
-                                {/* Carousel */}
-                                <div className="md:flex md:items-center">
-                                    <Carousel autoPlay infiniteLoop showIndicators={false} showThumbs={false}>
-                                        {project.images.map((img, i) => (
-                                            <div key={i}>
-                                                <img src={img} alt={`${project.name} screenshot ${i + 1}`} />
-                                            </div>
-                                        ))}
-                                    </Carousel>
-                                </div>
-
-                                {/* Info */}
-                                <div className="mt-6 mb-2 md:border-l-2 md:pl-2 border-gray-300">
-                                    <h3 className="text-2xl font-semibold tracking-wide text-white">
-                                        {project.name}
-                                    </h3>
-                                    <p className="text-gray-400">{project.description}</p>
-                                    <div className="flex gap-2 py-3 flex-wrap">
-                                        {project.techStack.map((tech, i) => (
-                                            <button
-                                                key={i}
-                                                className="px-4  backdrop-blur-md rounded-full shadow-sm hover:bg-white/20 transition text-white"
-                                            >
-                                                {tech}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Buttons */}
-                                <div className="flex flex-row flex-wrap gap-2 justify-center items-center md:flex-col md:gap-3">
-                                    <ProjectButton url={project.liveLink} text="Live show" />
-                                    <ProjectButton url={project.githubLink} text="Github" />
-                                    <button
-                                        onClick={() => setSelectedProject(project)}
-                                        className="h-10 px-2 py-2 font-semibold border rounded border-gray-800 text-gray-800 hover:bg-white dark:hover:bg-gray-700 transition delay-100 duration-300 ease-in-out bg-indigo-500"
-                                    >
-                                        Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Modal */}
-                <div
-                    className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    {selectedProject && (
-                        <div
-                            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                            onClick={() => setSelectedProject(null)}
-                        >
-                            <div
-                                className="bg-white dark:bg-gray-800 rounded-lg p-6 w-11/12 max-w-2xl relative max-h-[80vh] overflow-y-auto"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <button
-                                    className="absolute top-2 right-2 text-gray-500 hover:text-red-500"
-                                    onClick={() => setSelectedProject(null)}
-                                >
-                                    ✕
-                                </button>
-                                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                                    {selectedProject.name}
-                                </h3>
-
-                                <Carousel autoPlay infiniteLoop showThumbs={false}>
-                                    {selectedProject.images.map((img, i) => (
-                                        <div key={i}>
-                                            <img src={img} alt={`${selectedProject.name} modal screenshot ${i + 1}`} />
-                                        </div>
-                                    ))}
-                                </Carousel>
-                                <p className="mt-4">
-                                    <strong>Tech Stack: </strong>
-                                    <span className="text-gray-600 dark:text-gray-400">
-                                        {selectedProject.techStack.join(", ")}
-                                    </span>
-                                </p>
-                                <p>
-                                    <strong>Description:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.description}</span>
-                                </p>
-                                <p>
-                                    <strong>Live:</strong>{" "}
-                                    <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        <span className="text-gray-600 dark:text-gray-400">{selectedProject.liveLink}</span>
-                                    </a>
-                                </p>
-                                <p>
-                                    <strong>GitHub:</strong>{" "}
-                                    <a href={selectedProject.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                        {selectedProject.githubLink}
-                                    </a>
-                                </p>
-                                <p>
-                                    <strong>Challenges:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.challenges}</span>
-                                </p>
-                                <p>
-                                    <strong>Future Plans:</strong> <span className="text-gray-600 dark:text-gray-400">{selectedProject.futurePlans}</span>
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                </div>
-
+                <h2 className="text-4xl font-bold text-center text-primary">Projects</h2>
+                <p className="text-xl text-center text-gray-600 dark:text-gray-400 my-5">
+                    A showcase of my projects, reflecting my skills and experience across different technologies.
+                </p>
             </div>
+
+            {/* Projects Grid */}
+            <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project) => (
+                    <div
+                        key={project._id}
+                        className="bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-500 ease-in-out"
+                        onClick={() => setSelectedProject(project)}
+                    >
+                        <Carousel autoPlay infiniteLoop showIndicators={false} showThumbs={false}>
+                            {project.images.map((img, i) => (
+                                <div key={i}>
+                                    <img src={img} alt={`${project.name} screenshot ${i + 1}`} className="h-60 w-full object-cover" />
+                                </div>
+                            ))}
+                        </Carousel>
+                        <div className="text-part p-6">
+                            <h3 className="text-2xl font-bold text-white mb-2">{project.name}</h3>
+                            <p className="text-gray-500 mb-4 pt-4 line-clamp-3">{project.description}</p>
+                            <div className="mb-4">
+                                {project.techStack.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Modal */}
+            <ProjectModal
+                project={selectedProject}
+                onClose={() => setSelectedProject(null)}
+            /> 
         </section>
     );
-};
-
-const ProjectButton = ({ url, text }) => (
-    <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="h-10 px-2 py-2 font-semibold border rounded border-gray-800 text-gray-800 dark:border-gray-300 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition delay-100 duration-300 ease-in-out bg-indigo-500"
-    >
-        {text}
-    </a>
-);
-
-export default MainProjectsSection;
+}
