@@ -9,3 +9,4 @@ dist/
 
 # VSCode Local History backups
 .history/
+.history
