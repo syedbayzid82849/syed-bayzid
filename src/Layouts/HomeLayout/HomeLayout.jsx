@@ -6,6 +6,7 @@ import MainProjectsSection from '../../Components/Projects/MainProjectsSection/M
 import ContactInfo from '../../Components/ContactInfo/ContactInfo';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/HomeComponents/Navbar/Navbar';
+import Services from '../../Components/Services/Services';
 
 const HomeLayout = () => {
     return (
@@ -15,6 +16,7 @@ const HomeLayout = () => {
             <AboutMe></AboutMe>
             <SkillsSection></SkillsSection>
             <MainProjectsSection></MainProjectsSection>
+            <Services></Services>
             <ContactInfo></ContactInfo>
             <Footer></Footer>
         </div>
