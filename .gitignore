@@ -8,5 +8,4 @@ dist/
 .env
 
 # VSCode Local History backups
-.history/
 .history

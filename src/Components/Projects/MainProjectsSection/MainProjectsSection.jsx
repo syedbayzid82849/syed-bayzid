@@ -32,14 +32,26 @@ export default function MainProjectsSection() {
     if (error) return <p className="flex justify-center items-center">Error loading projects</p>;
 
     return (
-        <section id="projects" className="px-5 py-7 mx-auto mt-16">
-            <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center text-primary" data-aos="fade-down">
+        <section id="projects" className="px-4 py-16">
+            <div className="container mb-10">
+                <motion.h1
+                    className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-center"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 1 }}
+                >
                     Projects
-                </h2>
-                <p className="text-xl text-center text-gray-600 dark:text-gray-400 my-5" data-aos="fade-up" data-aos-delay="200">
+                </motion.h1>
+                <motion.p
+                    className="text-xl text-gray-500 max-w-2xl mx-auto text-center "
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                >
                     A showcase of my projects, reflecting my skills and experience across different technologies.
-                </p>
+                </motion.p>
             </div>
 
             {/* Projects Grid */}

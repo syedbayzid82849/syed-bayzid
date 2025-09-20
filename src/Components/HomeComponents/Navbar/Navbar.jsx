@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-    import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +32,11 @@ const Navbar = () => {
             <li>
                 <Link to="projects" smooth duration={500} spy offset={-50} activeClass="bg-gray-700" className="block px-4 py-2 text-cyan-100 font-bold hover:bg-gray-700 rounded cursor-pointer">
                     Projects
+                </Link>
+            </li>
+            <li>
+                <Link to="services" smooth duration={500} spy offset={-50} activeClass="bg-gray-700" className="block px-4 py-2 text-cyan-100 font-bold hover:bg-gray-700 rounded cursor-pointer">
+                    Services
                 </Link>
             </li>
             <li>

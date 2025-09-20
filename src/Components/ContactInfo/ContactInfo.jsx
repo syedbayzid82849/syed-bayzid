@@ -1,21 +1,23 @@
-import React from 'react';
-import { MdEmail, MdPhone, MdWhatsapp } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { MdEmail, MdPhone, MdWhatsapp } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 const ContactInfo = () => {
     useEffect(() => {
         AOS.init({
-            duration: 1200,
-            once: false,
+            // duration: 1200,
+            // once: false,
         });
     }, []);
+
     return (
-        <section id='contact' className="py-20 px-4 text-slate-100 transition-colors duration-300">
-            {/* Section Header */}
-            <div className='mb-16'>
+        <section
+            id="contact"
+            className="py-16 px-4 text-slate-100 transition-colors duration-300 overflow-x-hidden"
+        >
+            <div className="mb-10">
                 <motion.h1
                     className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-center"
                     initial={{ opacity: 0, y: -50 }}
@@ -26,7 +28,7 @@ const ContactInfo = () => {
                     Contact Me
                 </motion.h1>
                 <motion.p
-                    className="text-center text-gray-400 "
+                    className="text-xl text-gray-500 max-w-2xl mx-auto text-center "
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: false }}
@@ -36,68 +38,61 @@ const ContactInfo = () => {
                 </motion.p>
             </div>
 
-            <div
-                className="grid grid-cols-1 lg:px-8 md:grid-cols-2 md:divide-x divide-gray-300 dark:divide-gray-700"
-            >
+            {/* Grid wrapper with max-width */}
+            <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x divide-gray-300 dark:divide-gray-700 max-w-6xl mx-auto">
                 {/* Contact Info */}
-                <motion.div
-                    className="py-6 md:py-0 md:px-6"
-                    variants={{
-                        hidden: { opacity: 0, x: -50 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
-                    }}
-                >
+                <div className="pb-4">
                     <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-                    <motion.div className="space-y-6 text-left">
-                        <motion.div
-                            className="flex items-center gap-4"
-                            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } } }}
-                        >
+                    <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
+                    <div className="space-y-6 text-left ">
+                        <div data-aos="fade-right" className="flex items-center gap-4">
                             <MdEmail className="text-2xl text-blue-600" />
-                            <a href="mailto:husains82849@gmail.com" className="text-lg hover:underline">
+                            <a
+                                href="mailto:husains82849@gmail.com"
+                                className="text-lg hover:underline"
+                            >
                                 husains82849@gmail.com
                             </a>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            className="flex items-center gap-4"
-                            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.1 } } }}
-                        >
+                        <div data-aos="fade-left" className="flex items-center gap-4">
                             <MdEmail className="text-2xl text-blue-600" />
-                            <a href="mailto:syedbayzid500@gmail.com" className="text-lg hover:underline">
+                            <a
+                                href="mailto:syedbayzid500@gmail.com"
+                                className="text-lg hover:underline"
+                            >
                                 syedbayzid500@gmail.com
                             </a>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            className="flex items-center gap-4"
-                            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.2 } } }}
-                        >
+                        <div data-aos="fade-right" className="flex items-center gap-4">
                             <MdPhone className="text-2xl text-green-600" />
-                            <a href="tel:+8801703480840" className="text-lg hover:underline">
+                            <a
+                                href="tel:+8801703480840"
+                                className="text-lg hover:underline"
+                            >
                                 +880 1703 380 840
                             </a>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            className="flex items-center gap-4"
-                            variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay: 0.3 } } }}
-                        >
+                        <div data-aos="fade-left" className="flex items-center gap-4">
                             <MdWhatsapp className="text-2xl text-green-500" />
-                            <a href="https://wa.me/8801703480840" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
+                            <a
+                                href="https://wa.me/8801703480840"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-lg hover:underline"
+                            >
                                 WhatsApp Me
                             </a>
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Contact Form */}
                 <form
                     noValidate
                     className="flex flex-col py-6 space-y-6 md:py-0 md:px-6"
-                    data-aos="fade-left"
-                    data-aos-duration="800"
-                    data-aos-delay="100"
                 >
                     <label className="block">
                         <span className="mb-1 block">Full name</span>
@@ -130,7 +125,6 @@ const ContactInfo = () => {
                     </button>
                 </form>
             </div>
-
         </section>
     );
 };

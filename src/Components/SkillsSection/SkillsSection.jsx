@@ -3,6 +3,7 @@ import axios from "axios";
 import React from "react";
 import Loading from "../loading/Loading";
 import Tilt from "react-parallax-tilt";
+import { motion } from "framer-motion";
 
 const SkillsStatic = () => {
     const { data, isLoading, error } = useQuery({
@@ -11,7 +12,7 @@ const SkillsStatic = () => {
             const res = await axios.get("https://portfolio-website-server-steel.vercel.app/skills");
             return res.data;
         },
-    });  
+    });
 
 
     if (error) return <p className="flex justify-center items-center">Error loading skills</p>;
@@ -23,13 +24,29 @@ const SkillsStatic = () => {
                 flexDirection: "column",
                 alignItems: "center"
             }}
-            className="px-5 py-7 mx-auto mt-16"
+            className="px-4 py-16"
         >
-            <div>
-                <h2 className="text-4xl font-bold text-center text-primary">Skills</h2>
-                <p className="text-xl text-center text-gray-600 dark:text-gray-400 my-5">An overview of my technical skills and knowledge gained through practical projects and continuous learning.</p>
-            </div>
+            <div className="mb-10">
+                <motion.h1
+                    className="text-3xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-center"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 1 }}
+                >
+                    Skills
+                </motion.h1>
+                <motion.p
+                    className="text-xl text-gray-500 max-w-2xl mx-auto text-center "
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                >
+                    An overview of my technical skills and knowledge gained through practical projects and continuous learning.
+                </motion.p>
 
+            </div>
             {/* skills categories */}
 
             {
