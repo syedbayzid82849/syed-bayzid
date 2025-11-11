@@ -1,67 +1,37 @@
 [
     {
-        "id": 1,
-        "name": "Academix-Hub",
+        "_id": "689c5cc539a53de75a9d0f25",
+        "name": "WorkStream – Smart Project & Team Management Platform (NEXT.JS)",
+        "description": "**WorkStream** is a **Smart Project & Team Management Platform** that helps teams plan, organize, and track projects efficiently.\nIt combines **task management, real-time collaboration, analytics, and communication tools** — all in one platform.",
+        "projectType": "Project Management & Team Collaboration Platform.",
+        "purpose": "To enhance productivity, accountability, and collaboration in modern, project-based work environments.",
         "images": [
-            "/assets/academix2.png",
-            "/assets/academix1.png",
-            "/assets/academix3.png",
-            "/assets/academix4.png",
-            "/assets/academix5.png"
+            "/assets/workStream1.png",
+            "/assets/workStream2.png",
+            "/assets/workStream3.png",
+            "/assets/workStream5.png",
+            "/assets/workStream6.png",
+            "/assets/workStream7.png"
         ],
         "techStack": [
-            "react",
-            "vite",
-            "tailwind",
-            "react icon"
+            "Next.js",
+            "tailwindcss",
+            "framer-motion",
+            "express",
+            "next-auth",
+            "mongodb",
+            "stripe",
+            "socket.io",
+            "DaisyUI",
+            "Nodemailer",
+            "AOS",
+            "TanStack Query",
+            "Axios"
         ],
-        "description": "Academix-Hub is a secure, interactive platform for course enrollment and content management with a clean UI and role-based access.",
-        "liveLink": "https://academix-hub.netlify.app/",
-        "githubLink": "https://github.com/syedbayzid82849/Academix_Hub_Client_site.git",
-        "detailsLink": "https://github.com/syedbayzid82849/Academix_Hub_Client_site.git",
-        "challenges": "Implementing role-based access control and secure authentication.",
-        "futurePlans": "Add video lessons and quiz features."
-    },
-    {
-        "id": 2,
-        "name": "HobbyHub",
-        "images": [
-            "/assets/hobbyhub1.png",
-            "/assets/hobbyhub2.png",
-            "/assets/hobbyhub3.png",
-            "/assets/hobbyhub4.png"
-        ],
-        "techStack": [
-            "react",
-            "vite",
-            "tailwind"
-        ],
-        "description": "HobbyHub connects users through local hobby groups—create, join, and explore communities.",
-        "liveLink": "https://hobby-hub-01.netlify.app/",
-        "githubLink": "https://github.com/syedbayzid82849/Hobby_Hub_Client_site.git",
-        "detailsLink": "https://github.com/syedbayzid82849/Hobby_Hub_Client_site.git",
-        "challenges": "Building an efficient group matching algorithm.",
-        "futurePlans": "Add in-app chat and event scheduling."
-    },
-    {
-        "id": 3,
-        "name": "Syed Bayzid",
-        "images": [
-            "/assets/syedbayzid1.png",
-            "/assets/syedbayzid2.png",
-            "/assets/syedbayzid3.png",
-            "/assets/syedbayzid4.png"
-        ],
-        "techStack": [
-            "react",
-            "vite",
-            "tailwind"
-        ],
-        "description": "Syed Bayzid's personal portfolio showcasing skills and projects.",
-        "liveLink": "https://syed-bayzid.netlify.app/",
-        "githubLink": "https://github.com/syedbayzid82849/syed-bayzid.git",
-        "detailsLink": "https://github.com/syedbayzid82849/syed-bayzid-portfolio/blob/main/README.md",
+        "githubLink": "https://github.com/syedbayzid82849/WorkStream.git",
+        "liveLink": "https://work-stream-bice.vercel.app/",
         "challenges": "Challenges have been my best teachers in development. Whether it’s fixing tricky bugs, meeting tight deadlines, or ensuring responsive design across all devices, each obstacle has sharpened my problem-solving skills. Every hurdle has made me more adaptable and confident in delivering quality work.",
-        "futurePlans": "Thank you for visiting my portfolio. I’m Syed Bayzid, a passionate frontend developer dedicated to crafting clean, modern, and user-friendly web experiences. My work blends creativity with functionality, ensuring every project not only looks great but also performs seamlessly. I’m constantly learning and exploring new technologies to stay ahead in the ever-evolving web development landscape. Feel free to connect with me for collaborations, projects, or just to say hello. Let’s create something amazing together!"
+        "futurePlans": "",
+        "coreFeatures": "[\n  {\"featureNo\": 1, \"title\": \"Task Management\", \"description\": \"Create, assign, and track tasks with deadlines, priorities, and file attachments.\"},\n  {\"featureNo\": 2, \"title\": \"Project Timeline & Milestones\", \"description\": \"Visualize project progress and set milestones using Gantt charts or calendar views.\"},\n  {\"featureNo\": 3, \"title\": \"File Sharing & Storage\", \"description\": \"Securely upload and manage project files with version control.\"},\n  {\"featureNo\": 4, \"title\": \"Team Communication\", \"description\": \"Real-time chat and discussion threads with tagging and notifications.\"},\n  {\"featureNo\": 5, \"title\": \"Collaboration Tools\", \"description\": \"Comment, review, and discuss tasks for better coordination.\"},\n  {\"featureNo\": 6, \"title\": \"Role-based Access Control\", \"description\": \"Define roles like Manager, Member, and Viewer for secure workflows.\"},\n  {\"featureNo\": 7, \"title\": \"Notifications & Reminders\", \"description\": \"Automatic alerts for task updates, messages, and deadlines.\"},\n  {\"featureNo\": 8, \"title\": \"Reports & Analytics\", \"description\": \"Interactive charts showing project progress and team performance.\"},\n  {\"featureNo\": 9, \"title\": \"Search & Filter\", \"description\": \"Find projects, tasks, or members using filters and keywords.\"},\n  {\"featureNo\": 10, \"title\": \"Attendance\", \"description\": \"Log attendance, check work hours.\"}\n]"
     }
 ]
