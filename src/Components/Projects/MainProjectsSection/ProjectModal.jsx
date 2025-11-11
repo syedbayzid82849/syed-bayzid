@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function ProjectModal({ project, onClose }) {
     if (!project) return null;
-
+console.log(project);
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/70 p-4 overflow-auto"

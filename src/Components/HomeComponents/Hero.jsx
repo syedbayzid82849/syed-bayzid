@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
 import developerProfile from '/assets/SB.jpg';
 import { Download, ExternalLink, Code, Terminal, Sparkles, Linkedin, Github } from 'lucide-react';
-import { Youtube, Facebook } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 
 const Hero = () => {
     const handleResumeDownload = () => {
@@ -14,7 +14,15 @@ const Hero = () => {
                 border: '1px solid hsl(var(--primary))',
             },
         });
+
+        const link = document.createElement('a');
+        link.href = '/Syed_Bayzid_MERN_Stack_Developer_Resume.pdf';
+        link.download = 'Syed_Bayzid_Resume';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
+
 
     const floatingElements = [
         { icon: Code, delay: 0, x: -20, y: -30 },
@@ -25,7 +33,6 @@ const Hero = () => {
     const socialLinks = [
         { href: 'https://www.linkedin.com/in/syed-bayzid-b91343329/', icon: Linkedin, label: 'LinkedIn' },
         { href: 'https://github.com/syedbayzid82849', icon: Github, label: 'GitHub' },
-        { href: 'https://www.youtube.com/@SyedBayzid0.1', icon: Youtube, label: 'YouTube' },
         { href: 'https://www.facebook.com/syed.bayzidhusain/', icon: Facebook, label: 'Facebook' }
     ];
 
